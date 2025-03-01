@@ -1,4 +1,116 @@
 <style>
+    .custom-toast {
+        position: fixed;
+        padding: 15px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 5px;
+        color: white;
+        display: none;
+        z-index: 9999;
+    }
+
+    .alert-success {
+        background-color: #28a745;
+    }
+
+    .alert-danger {
+        background-color: #dc3545;
+    }
+
+    .nsotien_logo {
+        height: 120px;
+        width: auto;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .nsotien_logo {
+            height: 70px;
+        }
+    }
+
+    .mt-3 a:hover {
+        color: white;
+        background-color: red;
+        border-color: red;
+    }
+
+    /*.header-logo {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-radius: 10px;
+        max-height: 100%;
+        max-width: 100%;
+    }*/
+
+    /* Cấu hình mặc định cho logo */
+.header-logo {
+    width: 30%; /* Kích thước mặc định là 30% */
+    max-width: 300px; /* Đảm bảo logo không quá lớn */
+    height: auto; /* Giữ tỉ lệ chiều cao và chiều rộng */
+}
+
+/* Khi màn hình nhỏ hơn hoặc bằng 768px (tablet, mobile) */
+@media (max-width: 768px) {
+    .header-logo {
+        width: 60%; /* Giảm kích thước xuống 50% trên thiết bị di động */
+    }
+}
+
+/* Khi màn hình nhỏ hơn hoặc bằng 480px (smartphone nhỏ) */
+@media (max-width: 480px) {
+    .header-logo {
+        width: 70%; /* Kích thước logo là 70% trên smartphone nhỏ */
+    }
+}
+
+/* Cấu hình chung cho khối thông báo */
+.mt-4 {
+    margin-top: 1rem;  /* Khoảng cách trên của phần tử */
+}
+
+.flex {
+    display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử con */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: flex-start; /* Căn trái các phần tử con */
+}
+
+.items-center {
+    align-items: center; /* Căn giữa các phần tử con theo chiều dọc */
+}
+
+.rounded-lg {
+    border-radius: 0.5rem; /* Bo góc các phần tử */
+}
+
+.bg-white {
+    background-color: #ffffff; /* Màu nền trắng */
+}
+
+.px-3 {
+    padding-left: 1rem; /* Padding cho bên trái */
+    padding-right: 1rem; /* Padding cho bên phải */
+}
+
+.py-3 {
+    padding-top: 1rem; /* Padding cho bên trên */
+    padding-bottom: 1rem; /* Padding cho bên dưới */
+}
+
+.shadow-lg {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng cho phần tử */
+}
+
+/* Kiểu cho icon thông báo */
+.text-primary {
+    color: #007bff; /* Màu sắc chủ đạo cho icon */
+}
+
+.me-2 {
+    margin-right: 0.5rem; /* Khoảng cách bên phải của icon */
+}
+
 /* Kiểu cho marquee */
 marquee {
     font-family: 'Arial', sans-serif; /* Chọn font cho marquee */
@@ -180,4 +292,7 @@ marquee {
         }
 
     }
+
+
+
 </style>
