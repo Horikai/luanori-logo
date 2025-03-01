@@ -167,7 +167,7 @@ marquee {
     }
 
     .page-layout-color {
-        background: #b3afaf url("/Assets/Images/bg-auth.jpg");
+        background: #b3afaf url("/bg-auth.jpg");
         background-size: cover;
         background-attachment: fixed;
         height: auto;
