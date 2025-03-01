@@ -10,6 +10,306 @@
   <link rel="stylesheet" type="text/css" href="https://tmp.nulla.top/ba-logo/fonts/RoGSans_sliced/font.css" />
   <link rel="stylesheet" type="text/css" href="fonts/GlowSans/font.css" />
   <title>Blue Archive Logo Generater</title>
+
+<style>
+    .custom-toast {
+        position: fixed;
+        padding: 15px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 5px;
+        color: white;
+        display: none;
+        z-index: 9999;
+    }
+
+    .alert-success {
+        background-color: #28a745;
+    }
+
+    .alert-danger {
+        background-color: #dc3545;
+    }
+
+    .nsotien_logo {
+        height: 120px;
+        width: auto;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .nsotien_logo {
+            height: 70px;
+        }
+    }
+
+    .mt-3 a:hover {
+        color: white;
+        background-color: red;
+        border-color: red;
+    }
+
+    /*.header-logo {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-radius: 10px;
+        max-height: 100%;
+        max-width: 100%;
+    }*/
+
+    /* Cấu hình mặc định cho logo */
+.header-logo {
+    width: 30%; /* Kích thước mặc định là 30% */
+    max-width: 300px; /* Đảm bảo logo không quá lớn */
+    height: auto; /* Giữ tỉ lệ chiều cao và chiều rộng */
+}
+
+/* Khi màn hình nhỏ hơn hoặc bằng 768px (tablet, mobile) */
+@media (max-width: 768px) {
+    .header-logo {
+        width: 60%; /* Giảm kích thước xuống 50% trên thiết bị di động */
+    }
+}
+
+/* Khi màn hình nhỏ hơn hoặc bằng 480px (smartphone nhỏ) */
+@media (max-width: 480px) {
+    .header-logo {
+        width: 70%; /* Kích thước logo là 70% trên smartphone nhỏ */
+    }
+}
+
+/* Cấu hình chung cho khối thông báo */
+.mt-4 {
+    margin-top: 1rem;  /* Khoảng cách trên của phần tử */
+}
+
+.flex {
+    display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử con */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: flex-start; /* Căn trái các phần tử con */
+}
+
+.items-center {
+    align-items: center; /* Căn giữa các phần tử con theo chiều dọc */
+}
+
+.rounded-lg {
+    border-radius: 0.5rem; /* Bo góc các phần tử */
+}
+
+.bg-white {
+    background-color: #ffffff; /* Màu nền trắng */
+}
+
+.px-3 {
+    padding-left: 1rem; /* Padding cho bên trái */
+    padding-right: 1rem; /* Padding cho bên phải */
+}
+
+.py-3 {
+    padding-top: 1rem; /* Padding cho bên trên */
+    padding-bottom: 1rem; /* Padding cho bên dưới */
+}
+
+.shadow-lg {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng cho phần tử */
+}
+
+/* Kiểu cho icon thông báo */
+.text-primary {
+    color: #007bff; /* Màu sắc chủ đạo cho icon */
+}
+
+.me-2 {
+    margin-right: 0.5rem; /* Khoảng cách bên phải của icon */
+}
+
+/* Kiểu cho marquee */
+marquee {
+    font-family: 'Arial', sans-serif; /* Chọn font cho marquee */
+    font-size: 14px; /* Kích thước chữ */
+    color: #333; /* Màu chữ chung */
+    white-space: nowrap; /* Ngừng ngắt dòng */
+    overflow: hidden; /* Ẩn phần chữ vượt quá phạm vi */
+}
+
+/* Tạo hiệu ứng cho phần văn bản đặc biệt */
+.text-danger-600 {
+    color: #e74c3c; /* Màu đỏ tươi cho văn bản quan trọng */
+}
+
+.font-bold {
+    font-weight: bold; /* Đậm chữ */
+}
+    .custom-success-alert {
+        background-color: #4CAF50 !important;
+        color: white !important;
+        padding: 10px !important;
+        text-align: center !important;
+        border-radius: 5px;
+    }
+
+    .alert.alert-danger.alert-block {
+        background: none;
+        border-color: transparent;
+        text-align: center;
+    }
+
+    /*a {*/
+    /*    margin: 5px;*/
+    /*}*/
+
+    svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .age-rule a {
+        background-color: #B4E3FF;
+        color: #F4FFFF !important;
+        border-radius: 10px !important;
+        text-align: center;
+        max-width: 10%;
+        margin: 5px auto;
+        padding: 5px 10px;
+    }
+
+    .age-rule a:hover {
+        background-color: #ffcc99;
+        color: #F4FFFF !important;
+    }
+
+    .page-layout-color {
+        background: #b3afaf url("/Assets/Images/bg-auth.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        height: auto;
+    }
+
+    #serverModal a#serverTeamButton {
+        width: 100% !important;
+
+        margin-bottom: 10px !important;
+
+        align-items: flex-start !important;
+        background-color: #8f34f5 !important;
+        border-color: #8f34f5 !important;
+        border-radius: 10px !important;
+        color: #ffffff !important;
+        display: inline-block !important;
+        font-family: system-ui !important;
+        font-size: 14px !important;
+        line-height: 21px !important;
+        margin: 10px 0px 0px !important;
+        text-align: center !important;
+    }
+
+    #serverModal a#serverTeamButton:hover {
+        background-color: #FF418C !important;
+        border-color: #FF418C !important;
+    }
+
+    #serverModal .mt-2 {
+        color: #212529 !important;
+        font-weight: 600 !important;
+        line-height: 24px !important;
+        margin: 8px 0px 0px !important;
+        text-align: center !important;
+    }
+
+    #serverModal .mb-2 {
+        color: #212529 !important;
+        font-weight: 600 !important;
+        line-height: 30px !important;
+        margin: 0px 0px 8px !important;
+        text-align: center !important;
+    }
+
+    #serverModal .text-center {
+        color: #212529 !important;
+        font-weight: 300 !important;
+        line-height: 24px !important;
+        text-align: center !important;
+    }
+
+    #serverModal img.logo {
+        color: #212529 !important;
+        display: inline !important;
+        font-weight: 300 !important;
+        line-height: 24px !important;
+        text-align: center !important;
+    }
+
+    #serverModal .modal-body {
+
+        outline: 2px solid #000;
+        border-radius: 10px;
+
+        background-color: #FCE3C6 !important;
+        color: #212529 !important;
+        font-weight: 300 !important;
+        line-height: 24px !important;
+
+    }
+
+    #serverModal .modal-content {
+        margin: 2px 127px;
+
+    }
+
+    #serverModal .modal-content p {
+        margin: 9px 30px;
+        line-height: 1.5;
+    }
+
+    #serverModal .modal-content h2 {
+        margin: 9px 30px;
+        line-height: 1.5;
+    }
+
+
+    #serverModal .modal-content font[color="#FF0000"] {
+        color: #FF0000;
+        font-weight: bold;
+
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+
+        #serverModal html,
+        body {
+            overflow: visible;
+        }
+    }
+
+    @media (max-width: 767px) {
+
+        #serverModal html,
+        body {
+            overflow: visible;
+        }
+
+        #serverModal .modal-body {
+            margin: 0 -36px;
+
+            text-align: center;
+        }
+
+        #serverModal .modal-content {
+            margin: 4px 55px
+        }
+
+        #serverModal .modal-content p {
+            margin: 32px 30px;
+            line-height: 1.5;
+        }
+
+    }
+
+
+
+</style>
+  
 </head>
 
 <body>
@@ -143,6 +443,79 @@
       </div>
     </section>
   </footer> -->
+
+<footer class="">
+    <div class="card-body">
+        <div class="mt-4 flex items-center rounded-lg bg-white px-3 py-3 shadow-lg">
+            <i class="fa fa-code text-primary me-5"></i>
+            <marquee>
+                Phát triển bởi
+                <a href="https://luanori.space">
+                    <span class="text-danger-600 font-bold">[LuanOri♪ヽITₓ₂]</span>
+            </marquee>
+            Version: <span id="version-display">Loading...</span>
+        </div>
+</footer>
+  <!-- Popup Modal -->
+<div id="version-popup" class="popup">
+    <div class="popup-content">
+        <h2>Có phiên bản mới!</h2>
+        <p>Vui lòng cập nhật để trải nghiệm những tính năng mới nhất.</p>
+        <button id="close-popup">Đóng</button>
+    </div>
+</div>
+<script>
+        // Hàm kiểm tra phiên bản từ server
+        function checkVersion() {
+            const currentVersion = "1.0.0";  // Phiên bản hiện tại của bạn
+
+            // Hiển thị phiên bản hiện tại trong footer
+            document.getElementById('version-display').textContent = currentVersion;
+
+            // Lấy thông tin phiên bản từ file version.txt trên server
+            fetch('https://luanori.space/version.txt')
+                .then(response => {
+                    if (response.ok) {
+                        return response.text(); // Nếu trả về OK, lấy nội dung
+                    }
+                    throw new Error('Không thể lấy thông tin phiên bản từ server');
+                })
+                .then(serverVersion => {
+                    console.log("Phiên bản từ server: " + serverVersion);
+                    // Kiểm tra xem phiên bản server có mới hơn hay không
+                    if (compareVersions(serverVersion, currentVersion) > 0) {
+                        // Nếu phiên bản trên server mới hơn, hiển thị popup
+                        document.getElementById('version-popup').style.display = 'flex';
+                    }
+                })
+                .catch(error => {
+                    console.error('Lỗi khi kiểm tra phiên bản:', error);
+                });
+        }
+
+        // Hàm so sánh phiên bản (ví dụ: 1.0.2 > 1.0.1)
+        function compareVersions(version1, version2) {
+            const v1Parts = version1.split('.').map(num => parseInt(num));
+            const v2Parts = version2.split('.').map(num => parseInt(num));
+
+            for (let i = 0; i < Math.max(v1Parts.length, v2Parts.length); i++) {
+                const v1 = v1Parts[i] || 0; // Nếu thiếu phần nào thì coi là 0
+                const v2 = v2Parts[i] || 0;
+                if (v1 < v2) return -1;
+                if (v1 > v2) return 1;
+            }
+            return 0; // Nếu giống nhau
+        }
+
+        // Đóng popup khi nhấn nút "Đóng"
+        document.getElementById('close-popup').onclick = function () {
+            document.getElementById('version-popup').style.display = 'none';
+        };
+
+        // Gọi hàm kiểm tra phiên bản khi trang web load
+        window.onload = checkVersion;
+    </script>
+  
   <script type="module" src="/src/main.ts"></script>
 </body>
 
