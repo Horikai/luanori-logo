@@ -116,19 +116,20 @@
       </div>
     </label>
   </section>
+  
 <footer class="">
     <div class="card-body">
-        <div class="mt-4 flex items-center rounded-lg bg-white px-3 py-3 shadow-lg">
-            <i class="fa fa-code text-primary me-5"></i>
-            <marquee>
-                Phát triển bởi
-                <a href="https://luanori.space/">
-                    <span class="text-danger-600 font-bold">[LuanOri♪ヽITₓ₂]</span>
-            </marquee>
-            Version: <span id="version-display">Loading...</span>
+    <div class="mt-4 flex items-center rounded-lg bg-white px-3 py-3 shadow-lg">
+        <i class="fa fa-code text-primary me-5"></i>
+        <marquee>
+            Phát triển bởi <a href="https://luanori.space">
+                <span class="text-danger-600 font-bold">[<?= $_Desgin ?>]</span>
+        </marquee>
+        Version: <span id="version-display">Loading...</span>
         </div>
 </footer>
-  
+</div>
+
 <script>
         // Hàm kiểm tra phiên bản từ server
         function checkVersion() {
