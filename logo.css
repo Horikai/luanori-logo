@@ -9,60 +9,6 @@ marquee {
     white-space: nowrap; /* Ngừng ngắt dòng */
     overflow: hidden; /* Ẩn phần chữ vượt quá phạm vi */
 }
-
-/* Tạo hiệu ứng cho phần văn bản đặc biệt */
-.text-danger-600 {
-    color: #e74c3c; /* Màu đỏ tươi cho văn bản quan trọng */
-}
-
-.font-bold {
-    font-weight: bold; /* Đậm chữ */
-}
-    .custom-success-alert {
-        background-color: #4CAF50 !important;
-        color: white !important;
-        padding: 10px !important;
-        text-align: center !important;
-        border-radius: 5px;
-    }
-
-    .alert.alert-danger.alert-block {
-        background: none;
-        border-color: transparent;
-        text-align: center;
-    }
-
-    /*a {*/
-    /*    margin: 5px;*/
-    /*}*/
-
-    svg {
-        width: 30px;
-        height: 30px;
-    }
-
-    .age-rule a {
-        background-color: #B4E3FF;
-        color: #F4FFFF !important;
-        border-radius: 10px !important;
-        text-align: center;
-        max-width: 10%;
-        margin: 5px auto;
-        padding: 5px 10px;
-    }
-
-    .age-rule a:hover {
-        background-color: #ffcc99;
-        color: #F4FFFF !important;
-    }
-
-    .page-layout-color {
-        background: #b3afaf url("bg-auth.jpg");
-        background-size: cover;
-        background-attachment: fixed;
-        height: auto;
-    }
-
     #serverModal a#serverTeamButton {
         width: 100% !important;
 
